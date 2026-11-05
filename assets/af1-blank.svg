@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="t">
+  <title id="t">Blank white low-top sneaker (placeholder, swap for a real photo later)</title>
+  <defs>
+    <linearGradient id="upper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef0f3"/>
+    </linearGradient>
+    <linearGradient id="sole" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9ecef"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <g id="shoe" stroke-linejoin="round" stroke-linecap="round">
+      <!-- tongue -->
+      <path d="M310 96 L318 50 Q321 38 335 38 L374 40 Q387 42 385 55 L380 92 Z"
+            fill="url(#upper)" stroke="#cfd4da" stroke-width="1.6"/>
+      <!-- upper -->
+      <path d="M50 206
+               C44 184 60 170 100 164
+               C150 156 196 144 232 128
+               L318 84
+               C326 80 332 82 336 86
+               C350 98 372 100 392 90
+               C424 80 470 72 506 70
+               C540 70 558 96 560 140
+               C561 172 562 190 560 206
+               Q306 212 50 206 Z"
+            fill="url(#upper)" stroke="#cfd4da" stroke-width="1.6"/>
+      <!-- collar padding -->
+      <path d="M340 98 C358 108 378 106 396 98 C430 88 470 82 502 82" fill="none" stroke="#dde1e6" stroke-width="1.4"/>
+      <!-- toe cap seam + perforations -->
+      <path d="M64 202 C62 184 82 174 150 168" fill="none" stroke="#d9dde2" stroke-width="1.4"/>
+      <g fill="#dfe3e8">
+        <circle cx="86" cy="186" r="1.6"/><circle cx="98" cy="182" r="1.6"/><circle cx="110" cy="179" r="1.6"/>
+        <circle cx="94" cy="194" r="1.6"/><circle cx="106" cy="190" r="1.6"/><circle cx="118" cy="187" r="1.6"/>
+      </g>
+      <!-- mudguard -->
+      <path d="M60 200 C130 196 190 190 226 204" fill="none" stroke="#d9dde2" stroke-width="1.4"/>
+      <!-- quarter panel (plain, no logo) -->
+      <path d="M244 200 C286 166 350 134 420 120 C456 113 482 114 498 120"
+            fill="none" stroke="#dde1e6" stroke-width="1.4"/>
+      <!-- eyestay -->
+      <path d="M212 150 L314 90 C322 86 330 88 336 94 L352 112 L244 170 Z"
+            fill="#fbfbfc" stroke="#d3d8de" stroke-width="1.4"/>
+      <!-- laces -->
+      <g stroke="#e6e9ec" stroke-width="4.5">
+        <path d="M236 148 L262 152"/><path d="M258 135 L284 139"/>
+        <path d="M280 122 L306 126"/><path d="M302 109 L326 113"/>
+      </g>
+      <!-- eyelets -->
+      <g fill="#ffffff" stroke="#c9ced5" stroke-width="1.2">
+        <circle cx="246" cy="153" r="3"/><circle cx="268" cy="140" r="3"/>
+        <circle cx="290" cy="127" r="3"/><circle cx="312" cy="114" r="3"/>
+      </g>
+      <!-- heel counter -->
+      <path d="M466 206 C472 160 482 114 500 72 C536 70 557 98 559 140 C560 172 560 192 558 206 Z"
+            fill="#fafbfc" stroke="#d3d8de" stroke-width="1.4"/>
+      <!-- heel tab -->
+      <path d="M536 80 C550 94 556 116 557 140 L547 140 C546 118 541 100 530 86 Z"
+            fill="#f3f5f7" stroke="#d3d8de" stroke-width="1.2"/>
+      <!-- midsole -->
+      <path d="M50 206 Q306 212 560 206
+               C566 222 564 240 552 246
+               L60 246
+               C44 242 40 222 50 206 Z"
+            fill="url(#sole)" stroke="#cfd4da" stroke-width="1.6"/>
+      <!-- midsole stitching -->
+      <path d="M66 224 Q306 230 548 222" fill="none" stroke="#d6dbe1" stroke-width="1.2" stroke-dasharray="5 6"/>
+      <!-- outsole -->
+      <path d="M58 246 L554 246 Q560 246 558 252 L556 256 L62 256 Q54 254 58 246 Z"
+            fill="#e4e7eb" stroke="#cfd4da" stroke-width="1.2"/>
+    </g>
+  </defs>
+
+  <ellipse cx="330" cy="300" rx="290" ry="18" fill="url(#shadow)"/>
+  <!-- back shoe of the pair -->
+  <use href="#shoe" transform="translate(56 8) scale(0.92)" opacity="0.9"/>
+  <!-- front shoe -->
+  <use href="#shoe" transform="translate(0 42)"/>
+</svg>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Skalla · 1-of-1 Air Force 1s</title>
+  <meta name="description" content="Hand-painted, 1-of-1 custom Air Force 1s by Skalla.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#/" class="wordmark">Skalla</a>
+    <span class="demo-badge">Demo</span>
+  </header>
+
+  <main id="app">
+
+    <!-- 1 + 2. Landing, magic, two paths -->
+    <section class="view" data-view="home">
+      <div class="stage">
+        <figure class="hero" id="hero">
+          <img src="assets/af1-blank.svg" alt="A blank white pair of low-top sneakers" width="640" height="340">
+        </figure>
+
+        <div class="magic" id="magic">
+          <svg class="sparks" id="sparks" aria-hidden="true"></svg>
+          <button class="magic-btn" id="magicBtn" type="button">
+            <span class="magic-label">magic</span>
+          </button>
+
+          <div class="magic-inner" id="magicInner" aria-live="polite">
+            <p class="thinking">what are you thinking?</p>
+            <div class="paths">
+              <a class="glass-tile" href="#/portfolio" aria-label="Browse the portfolio">
+                <span class="glass-q">?</span>
+                <span class="tile-caption">browse the portfolio</span>
+              </a>
+              <div class="siri-wrap">
+                <button class="siri-btn" id="cantThink" type="button">
+                  <span class="siri-glow" aria-hidden="true"></span>
+                  <span class="siri-text">cant think?</span>
+                </button>
+                <span class="tile-caption">generate 3 ideas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results" id="results" hidden>
+          <div class="loading" id="loading">
+            <span class="orb" aria-hidden="true"></span>
+            <p>making magic…</p>
+          </div>
+          <div class="ideas" id="ideas" hidden>
+            <p class="eyebrow">3 ideas, picked for you</p>
+            <div class="card-grid three" id="ideaGrid"></div>
+            <div class="row-actions">
+              <button class="btn ghost" id="again" type="button">Give me 3 new ones</button>
+              <button class="btn primary" id="ideaContinue" type="button" disabled>Continue with this design</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2b. Portfolio -->
+    <section class="view" data-view="portfolio" hidden>
+      <div class="narrow wide">
+        <a href="#/" class="back">‹ Back</a>
+        <h1>Portfolio</h1>
+        <p class="lede">Mockups Ben has already made. Pick one as your starting reference.</p>
+        <div class="card-grid" id="portfolioGrid"></div>
+      </div>
+      <div class="sticky-cta" id="portfolioCta" hidden>
+        <button class="btn primary" id="portfolioContinue" type="button">Continue with this design</button>
+      </div>
+    </section>
+
+    <!-- 3 + 4. Process / backstory + ideas (two steps) -->
+    <section class="view" data-view="process" hidden>
+      <div class="narrow">
+        <a href="#/" class="back">‹ Change design</a>
+
+        <div class="picked">
+          <img data-bind="thumb" alt="">
+          <div>
+            <p class="eyebrow">Your reference</p>
+            <p class="picked-name" data-bind="title"></p>
+            <p class="filename" data-bind="file"></p>
+          </div>
+        </div>
+
+        <h1>Every pair is 1-of-1.</h1>
+        <blockquote class="quote">
+          “There are few moments in life where I enter flow state. When I get my music going and start
+          creating with my two hands, it feels like magic is real. It takes immense concentration, especially
+          the small details, bending the idea from the mockup to the real pair in a way that works better
+          for the design.”
+          <cite>Ben</cite>
+        </blockquote>
+        <p class="lede">Hand-painted with acrylic leather paint, on a real Nike Air Force 1. No two pairs will ever be the exact same.</p>
+
+        <ul class="facts">
+          <li><strong>$300</strong> + shipping</li>
+          <li>Pay upfront, before painting starts</li>
+          <li>No refunds once payment is sent, it's custom for you</li>
+          <li>2 weeks to make, then shipped</li>
+          <li>Any size, ships anywhere</li>
+        </ul>
+
+        <!-- Step A -->
+        <form class="panel" id="stepA" novalidate>
+          <p class="step-tag">Step 1 of 2</p>
+          <label for="ideasInput" class="panel-title">What other specific ideas do you have for this pair?</label>
+          <textarea id="ideasInput" rows="5" placeholder="Colours, symbols, a name on the heel, anything you're imagining…" required></textarea>
+          <p class="field-error" id="ideasError" hidden>Add a few words about your idea first.</p>
+          <button class="btn primary" type="submit">Next</button>
+        </form>
+
+        <div class="panel summary" id="ideasSummary" hidden>
+          <div>
+            <p class="step-tag">Your ideas</p>
+            <p class="summary-text" data-bind="ideas"></p>
+          </div>
+          <button class="btn ghost small" type="button" id="editIdeas">Edit</button>
+        </div>
+
+        <!-- Step B -->
+        <form class="panel" id="stepB" hidden novalidate>
+          <p class="step-tag">Step 2 of 2</p>
+          <p class="panel-title">Where should Ben reach you?</p>
+
+          <div class="ref-row">
+            <img data-bind="thumb" alt="">
+            <div>
+              <p class="label">Reference photo</p>
+              <p class="filename" data-bind="file"></p>
+            </div>
+          </div>
+
+          <label class="label" for="emailInput">Email</label>
+          <input id="emailInput" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+          <p class="field-error" id="emailError" hidden>Enter an email so Ben can reply about your design.</p>
+
+          <label class="label" for="sizeInput">Shoe size</label>
+          <input id="sizeInput" type="text" placeholder="Any size, e.g. US M 10, EU 44, UK 7.5" required>
+          <p class="field-error" id="sizeError" hidden>Enter your shoe size.</p>
+
+          <button class="btn primary" type="submit">Send my idea to Ben</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4b. Email preview (demo) + 5. back and forth -->
+    <section class="view" data-view="sent" hidden>
+      <div class="narrow">
+        <a href="#/process" class="back">‹ Edit</a>
+        <h1>Your idea is ready for Ben.</h1>
+        <p class="demo-note"><strong>Demo:</strong> this site does not send email. Nothing has been sent yet. Use the button below to send it from your own email app.</p>
+
+        <div class="email-card">
+          <div class="email-row"><span>To</span><span data-bind="mailTo"></span></div>
+          <div class="email-row"><span>Subject</span><span data-bind="mailSubject"></span></div>
+          <pre class="email-body" data-bind="mailBody"></pre>
+        </div>
+
+        <div class="row-actions">
+          <a class="btn primary" id="mailtoBtn" href="#">Open in my email app</a>
+          <button class="btn ghost" id="copyBtn" type="button">Copy email</button>
+        </div>
+
+        <p class="one-liner">Ben will email you back. You'll go back and forth until you both settle on the final idea.</p>
+
+        <div class="panel later">
+          <p class="step-tag">Later</p>
+          <p class="panel-title">Final idea confirmed with Ben?</p>
+          <p class="muted">Come back here to check out and pay for your 1-of-1s.</p>
+          <a class="btn primary" href="#/checkout">Go to checkout</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5b. Checkout (demo) -->
+    <section class="view" data-view="checkout" hidden>
+      <div class="narrow">
+        <a href="#/sent" class="back">‹ Back</a>
+        <h1>Checkout</h1>
+
+        <div class="panel order">
+          <img data-bind="thumb" alt="">
+          <div>
+            <p class="picked-name">Custom 1-of-1 Air Force 1</p>
+            <p class="muted">Reference: <span class="filename" data-bind="file"></span></p>
+            <p class="muted">Size: <span data-bind="size"></span></p>
+          </div>
+        </div>
+
+        <fieldset class="panel shipping">
+          <legend class="panel-title">Shipping</legend>
+          <label class="ship-opt">
+            <input type="radio" name="ship" value="Standard" checked>
+            <span class="ship-name">Standard</span>
+            <span class="ship-price">Calculated at checkout</span>
+          </label>
+          <label class="ship-opt">
+            <input type="radio" name="ship" value="Express">
+            <span class="ship-name">Express</span>
+            <span class="ship-price">Calculated at checkout</span>
+          </label>
+          <p class="demo-note small"><strong>Demo:</strong> shipping price and delivery time depend on the option you choose. Real rates are not connected yet.</p>
+        </fieldset>
+
+        <div class="panel totals">
+          <div class="total-row"><span>Base price</span><span>$300</span></div>
+          <div class="total-row"><span>Shipping (<span data-bind="ship"></span>)</span><span>Calculated at checkout</span></div>
+          <div class="total-row grand"><span>Total</span><span>$300 + shipping</span></div>
+        </div>
+
+        <ul class="notices">
+          <li><strong>No refunds</strong> once payment is sent. Each pair is made for you.</li>
+          <li><strong>2 weeks</strong> to make after payment, then it ships.</li>
+        </ul>
+
+        <button class="btn primary block" id="payBtn" type="button">Pay $300 + shipping (demo)</button>
+        <p class="muted center small">Demo button. No card is charged.</p>
+      </div>
+    </section>
+
+    <!-- 5c. Paid (demo) -->
+    <section class="view" data-view="paid" hidden>
+      <div class="narrow center">
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27 l7 7 l15 -16"/></svg>
+        </div>
+        <h1>Paid <span class="muted">(demo)</span></h1>
+        <p class="lede">No card was charged. In the real version, Ben starts painting after payment.</p>
+        <div class="panel order">
+          <img data-bind="thumb" alt="">
+          <div class="left">
+            <p class="picked-name">Custom 1-of-1 Air Force 1</p>
+            <p class="muted">Size <span data-bind="size"></span> · <span data-bind="ship"></span> shipping</p>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li><span>1</span>Payment received</li>
+          <li><span>2</span>Ben paints your pair, about 2 weeks</li>
+          <li><span>3</span>Shipped to you</li>
+        </ol>
+        <a href="#/" class="btn ghost" data-restart>Start over</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/portfolio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
