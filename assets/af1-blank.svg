@@ -1,84 +1,138 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="t">
-  <title id="t">Blank white low-top sneaker (placeholder, swap for a real photo later)</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="t">
+  <title id="t">A pair of white Nike Air Force 1 Low sneakers (illustration)</title>
   <defs>
-    <linearGradient id="upper" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="up" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#eef0f3"/>
+      <stop offset=".7" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e9ebee"/>
     </linearGradient>
-    <linearGradient id="sole" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ov" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#e9ecef"/>
+      <stop offset="1" stop-color="#f1f2f4"/>
     </linearGradient>
-    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#000" stop-opacity="0.16"/>
+    <linearGradient id="ms" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".55" stop-color="#f7f8f9"/>
+      <stop offset="1" stop-color="#e4e7ea"/>
+    </linearGradient>
+    <linearGradient id="sw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eceef1"/>
+    </linearGradient>
+    <linearGradient id="lining" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3e6ea"/>
+      <stop offset="1" stop-color="#f4f5f7"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#000" stop-opacity=".18"/>
+      <stop offset=".6" stop-color="#000" stop-opacity=".06"/>
       <stop offset="1" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
 
-    <g id="shoe" stroke-linejoin="round" stroke-linecap="round">
-      <!-- tongue -->
-      <path d="M310 96 L318 50 Q321 38 335 38 L374 40 Q387 42 385 55 L380 92 Z"
-            fill="url(#upper)" stroke="#cfd4da" stroke-width="1.6"/>
+    <!-- one AF1 Low, lateral view, toe to the right -->
+    <g id="af1" stroke-linejoin="round" stroke-linecap="round">
+      <!-- tongue (behind the upper) -->
+      <path d="M284 128 L296 78 C298 70 304 66 312 66 L368 72 C378 73 382 80 380 88 L372 118 Z"
+            fill="url(#ov)" stroke="#c9ced5" stroke-width="1.6"/>
+      <!-- tongue label -->
+      <path d="M306 76 L352 81 L348 102 L302 97 Z" fill="#ffffff" stroke="#d3d7dd" stroke-width="1.2"/>
+      <path d="M314 86 L342 89 M313 92 L336 94" stroke="#dfe2e6" stroke-width="2"/>
+      <!-- inner lining seen through the collar -->
+      <path d="M92 124 C130 108 200 106 290 104 L282 132 C262 142 240 142 210 134 C170 120 120 116 92 124 Z"
+            fill="url(#lining)" stroke="#cdd2d8" stroke-width="1.2"/>
+
       <!-- upper -->
-      <path d="M50 206
-               C44 184 60 170 100 164
-               C150 156 196 144 232 128
-               L318 84
-               C326 80 332 82 336 86
-               C350 98 372 100 392 90
-               C424 80 470 72 506 70
-               C540 70 558 96 560 140
-               C561 172 562 190 560 206
-               Q306 212 50 206 Z"
-            fill="url(#upper)" stroke="#cfd4da" stroke-width="1.6"/>
-      <!-- collar padding -->
-      <path d="M340 98 C358 108 378 106 396 98 C430 88 470 82 502 82" fill="none" stroke="#dde1e6" stroke-width="1.4"/>
-      <!-- toe cap seam + perforations -->
-      <path d="M64 202 C62 184 82 174 150 168" fill="none" stroke="#d9dde2" stroke-width="1.4"/>
-      <g fill="#dfe3e8">
-        <circle cx="86" cy="186" r="1.6"/><circle cx="98" cy="182" r="1.6"/><circle cx="110" cy="179" r="1.6"/>
-        <circle cx="94" cy="194" r="1.6"/><circle cx="106" cy="190" r="1.6"/><circle cx="118" cy="187" r="1.6"/>
+      <path d="M74 266
+               C62 232 58 190 66 160
+               C70 142 76 130 88 122
+               C122 112 172 118 210 132
+               C240 142 262 140 282 130
+               L298 108
+               L524 186
+               C610 194 700 198 740 216
+               C764 228 768 250 756 260
+               L746 262
+               C720 270 690 272 646 272
+               L74 266 Z"
+            fill="url(#up)" stroke="#c4c9d0" stroke-width="1.8"/>
+
+      <!-- collar padding stitch -->
+      <path d="M94 136 C128 126 174 130 210 144 C240 154 262 152 280 142" fill="none" stroke="#d6dade" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+      <!-- toe cap seam + stitching -->
+      <path d="M640 271 C642 246 664 228 700 229" fill="none" stroke="#cdd2d8" stroke-width="1.4"/>
+      <path d="M650 271 C652 251 670 236 700 236" fill="none" stroke="#d9dde1" stroke-width="1.1" stroke-dasharray="4 4"/>
+      <!-- toe box perforations -->
+      <g fill="#d3d8de">
+        <circle cx="668" cy="250" r="1.7"/><circle cx="680" cy="246" r="1.7"/><circle cx="692" cy="243" r="1.7"/><circle cx="704" cy="242" r="1.7"/><circle cx="716" cy="244" r="1.7"/>
+        <circle cx="664" cy="260" r="1.7"/><circle cx="676" cy="256" r="1.7"/><circle cx="688" cy="253" r="1.7"/><circle cx="700" cy="251" r="1.7"/><circle cx="712" cy="251" r="1.7"/><circle cx="724" cy="252" r="1.7"/>
+        <circle cx="684" cy="263" r="1.7"/><circle cx="696" cy="261" r="1.7"/><circle cx="708" cy="260" r="1.7"/><circle cx="720" cy="260" r="1.7"/><circle cx="732" cy="259" r="1.7"/>
+        <circle cx="584" cy="214" r="1.6"/><circle cx="598" cy="218" r="1.6"/><circle cx="612" cy="221" r="1.6"/>
+        <circle cx="590" cy="224" r="1.6"/><circle cx="604" cy="228" r="1.6"/><circle cx="618" cy="231" r="1.6"/>
       </g>
+
       <!-- mudguard -->
-      <path d="M60 200 C130 196 190 190 226 204" fill="none" stroke="#d9dde2" stroke-width="1.4"/>
-      <!-- quarter panel (plain, no logo) -->
-      <path d="M244 200 C286 166 350 134 420 120 C456 113 482 114 498 120"
-            fill="none" stroke="#dde1e6" stroke-width="1.4"/>
+      <path d="M752 258 C720 262 690 262 650 258 C560 252 330 250 120 252" fill="none" stroke="#cfd4da" stroke-width="1.3"/>
+      <path d="M740 264 C700 266 670 266 640 263 C560 258 330 258 120 259" fill="none" stroke="#dde0e4" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- heel counter -->
+      <path d="M74 266 C62 232 58 190 66 160 C70 142 76 130 88 122 C112 116 136 116 156 120 C152 170 172 226 226 268 Z"
+            fill="url(#ov)" stroke="#c4c9d0" stroke-width="1.5"/>
+      <path d="M146 128 C144 172 160 220 206 262" fill="none" stroke="#d9dde1" stroke-width="1.1" stroke-dasharray="4 4"/>
       <!-- eyestay -->
-      <path d="M212 150 L314 90 C322 86 330 88 336 94 L352 112 L244 170 Z"
-            fill="#fbfbfc" stroke="#d3d8de" stroke-width="1.4"/>
+      <path d="M292 116 L526 192 C534 196 534 206 522 208 L300 146 C286 142 282 126 292 116 Z"
+            fill="url(#ov)" stroke="#c4c9d0" stroke-width="1.5"/>
+      <path d="M300 136 L516 198" fill="none" stroke="#d9dde1" stroke-width="1.1" stroke-dasharray="4 4"/>
       <!-- laces -->
-      <g stroke="#e6e9ec" stroke-width="4.5">
-        <path d="M236 148 L262 152"/><path d="M258 135 L284 139"/>
-        <path d="M280 122 L306 126"/><path d="M302 109 L326 113"/>
+      <g fill="none">
+        <path d="M300 110 L326 116" stroke="#c9ced5" stroke-width="9"/><path d="M300 110 L326 116" stroke="#fbfbfc" stroke-width="6.6"/>
+        <path d="M342 124 L368 130" stroke="#c9ced5" stroke-width="9"/><path d="M342 124 L368 130" stroke="#fbfbfc" stroke-width="6.6"/>
+        <path d="M384 138 L410 144" stroke="#c9ced5" stroke-width="9"/><path d="M384 138 L410 144" stroke="#fbfbfc" stroke-width="6.6"/>
+        <path d="M426 152 L452 158" stroke="#c9ced5" stroke-width="9"/><path d="M426 152 L452 158" stroke="#fbfbfc" stroke-width="6.6"/>
+        <path d="M468 166 L494 172" stroke="#c9ced5" stroke-width="9"/><path d="M468 166 L494 172" stroke="#fbfbfc" stroke-width="6.6"/>
+        <path d="M506 180 L528 185" stroke="#c9ced5" stroke-width="9"/><path d="M506 180 L528 185" stroke="#fbfbfc" stroke-width="6.6"/>
       </g>
       <!-- eyelets -->
-      <g fill="#ffffff" stroke="#c9ced5" stroke-width="1.2">
-        <circle cx="246" cy="153" r="3"/><circle cx="268" cy="140" r="3"/>
-        <circle cx="290" cy="127" r="3"/><circle cx="312" cy="114" r="3"/>
+      <g fill="#ffffff" stroke="#bfc5cc" stroke-width="1.3">
+        <circle cx="314" cy="128" r="3.4"/><circle cx="356" cy="141" r="3.4"/><circle cx="398" cy="154" r="3.4"/>
+        <circle cx="440" cy="167" r="3.4"/><circle cx="482" cy="180" r="3.4"/>
       </g>
-      <!-- heel counter -->
-      <path d="M466 206 C472 160 482 114 500 72 C536 70 557 98 559 140 C560 172 560 192 558 206 Z"
-            fill="#fafbfc" stroke="#d3d8de" stroke-width="1.4"/>
-      <!-- heel tab -->
-      <path d="M536 80 C550 94 556 116 557 140 L547 140 C546 118 541 100 530 86 Z"
-            fill="#f3f5f7" stroke="#d3d8de" stroke-width="1.2"/>
+      <!-- lace dubrae -->
+      <path d="M516 196 L540 202 L536 214 L512 208 Z" fill="#e7e9ec" stroke="#b9bfc7" stroke-width="1.2"/>
+
+      <!-- Swoosh -->
+      <path d="M108 140
+               C250 196 410 220 520 218
+               C540 218 552 206 562 186
+               C566 178 580 176 582 188
+               C586 236 556 262 498 262
+               C376 260 220 200 108 140 Z"
+            fill="url(#sw)" stroke="#bfc5cc" stroke-width="1.7"/>
+      <path d="M150 166 C270 212 410 234 516 232 C546 232 562 216 572 198" fill="none" stroke="#d8dce1" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M190 192 C300 230 410 252 500 252 C548 252 570 232 576 206" fill="none" stroke="#d8dce1" stroke-width="1" stroke-dasharray="4 4"/>
       <!-- midsole -->
-      <path d="M50 206 Q306 212 560 206
-               C566 222 564 240 552 246
-               L60 246
-               C44 242 40 222 50 206 Z"
-            fill="url(#sole)" stroke="#cfd4da" stroke-width="1.6"/>
+      <path d="M74 266 L646 272 C690 272 724 268 746 262 L756 260
+               C766 266 764 292 748 306
+               C734 318 704 322 664 322
+               L104 324
+               C78 324 62 316 60 300
+               C58 284 62 270 74 266 Z"
+            fill="url(#ms)" stroke="#c4c9d0" stroke-width="1.8"/>
       <!-- midsole stitching -->
-      <path d="M66 224 Q306 230 548 222" fill="none" stroke="#d6dbe1" stroke-width="1.2" stroke-dasharray="5 6"/>
+      <path d="M78 282 L650 288 C694 288 724 284 750 274" fill="none" stroke="#cfd4da" stroke-width="1.2" stroke-dasharray="5 5"/>
+      <!-- midsole ridge -->
+      <path d="M68 300 C150 302 500 304 660 302 C700 302 728 298 752 290" fill="none" stroke="#e1e4e8" stroke-width="1.4"/>
+      <!-- AIR deboss -->
+      <text x="128" y="312" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" font-style="italic" letter-spacing="1" fill="#ffffff" stroke="#d2d6dc" stroke-width=".8">AIR</text>
       <!-- outsole -->
-      <path d="M58 246 L554 246 Q560 246 558 252 L556 256 L62 256 Q54 254 58 246 Z"
-            fill="#e4e7eb" stroke="#cfd4da" stroke-width="1.2"/>
+      <path d="M92 324 L670 322 C710 322 738 316 750 306 C752 316 740 326 712 330 L100 332 C84 332 80 326 92 324 Z"
+            fill="#e2e5e9" stroke="#c4c9d0" stroke-width="1.2"/>
     </g>
   </defs>
 
-  <ellipse cx="330" cy="300" rx="290" ry="18" fill="url(#shadow)"/>
+  <ellipse cx="450" cy="378" rx="380" ry="20" fill="url(#shadow)"/>
   <!-- back shoe of the pair -->
-  <use href="#shoe" transform="translate(56 8) scale(0.92)" opacity="0.9"/>
+  <use href="#af1" transform="translate(96 8) scale(.94)" opacity=".92"/>
   <!-- front shoe -->
-  <use href="#shoe" transform="translate(0 42)"/>
+  <use href="#af1" transform="translate(28 46)"/>
 </svg>

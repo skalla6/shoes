@@ -19,7 +19,7 @@ A static demo of the Skalla custom-shoe flow. It's plain HTML, CSS and JavaScrip
   They replace the labelled placeholders.
 - **More mockups later:** add the file to `assets/portfolio/` and add one line to `js/portfolio.js`.
   The portfolio and the "generate 3 ideas" picker both read that list.
-- **Hero shoe:** `assets/af1-blank.svg` is a drawn placeholder (white low-top pair, no logo).
+- **Hero shoe:** `assets/af1-blank.svg` is a detailed drawing of a white AF1 Low pair (with Swoosh).
   To use a photo, save it in `assets/` and change the `src` on the hero `<img>` in `index.html`.
 
 ## Files
